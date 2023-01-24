@@ -1,0 +1,25 @@
+
+  <h1 class="visually-hidden">Sidebars examples</h1>
+
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <span class="fs-4">CEShop</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li *ngFor="let course of courses" class="nav-item">
+        <a [routerLink]="['course',course.id]" class="nav-link text-white" aria-current="page">
+          {{course.name}}
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a (click)="logout()" style="cursor:pointer;" routerLinkActive="active" class="nav-link text-white">Sign out</a>
+
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+
